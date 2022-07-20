@@ -23,7 +23,16 @@
                     </div>
                 </div>
             </div>
-            {% block body %}{% endblock %}
+            <div class="row">
+                <div class="col-2 left-menu--container">
+                    {% block menu_left %}
+                        {% include 'layout/menu-left.html.twig' %}
+                    {% endblock %}
+                </div>
+                <div class="col-10 offset-2">
+                    {% block body %}{% endblock %}
+                </div>
+            </div>
         </div>
         <script type="text/javascript">
             const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');

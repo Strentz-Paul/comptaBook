@@ -171,10 +171,12 @@
 [data-theme="light"] {
   --background-color: #efefef;
   --color: #333333;
+  --background-contrast: #cfcfcf;
 }
 [data-theme="dark"] {
   --background-color: #333333;
   --color: #efefef;
+  --background-contrast: #555555;
 }
 * {
   padding: 0;
