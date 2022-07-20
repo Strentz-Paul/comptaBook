@@ -14,3 +14,12 @@ stop: ## Stop all the containers that belongs to the project
 	@-docker network disconnect comptaBook
 	$(DOCKER_COMPOSE_DEV) down
 	bash -c "symfony server:stop"
+
+db-migrate:
+	bash -c "symfony console doctrine:migration:migrate -n"
+
+build-assets:
+	bash -c "yarn encore dev"
+
+build-assets-watch:
+	bash -c "yarn encore dev --watch"
